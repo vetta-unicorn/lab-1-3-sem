@@ -134,31 +134,30 @@ namespace TestProject1
         [TestMethod]
         public void Input_Output_Test1()
         {
-            // Подменяем ввод
-            var input = "Model\nManufacturer\n100\n2022\n45\nwashType\n30"; // Введите данные, разделенные символом новой строки
+            var input = "Model\nManufacturer\n100\n2022\n45\nwashType\n30"; 
             var reader = new StringReader(input);
             Console.SetIn(reader);
 
-            int choice = 2; // выбор для стиральной машины
+            int choice = 2; 
             _createAndAddAppliance.Input_Output(appliances, choice);
 
             Assert.IsNotNull(appliances);
-            Assert.AreEqual(1, appliances.Count); // Убедитесь, что элемент действительно добавлен
+            Assert.AreEqual(1, appliances.Count); 
         }
 
         [TestMethod]
         public void Input_Output_Test2()
         {
-            // Подменяем ввод
-            var input = "aa\nmm\n110\n2000\n45\nwww99\n30999"; // Введите данные, разделенные символом новой строки
+            // ГЏГ®Г¤Г¬ГҐГ­ГїГҐГ¬ ГўГўГ®Г¤
+            var input = "aa\nmm\n110\n2000\n45\nwww99\n30999"; 
             var reader = new StringReader(input);
             Console.SetIn(reader);
 
-            int choice = 3; //выбор микроволновки
+            int choice = 3; 
             _createAndAddAppliance.Input_Output(appliances, choice);
 
             Assert.IsNotNull(appliances);
-            Assert.AreEqual(1, appliances.Count); // Убедитесь, что элемент действительно добавлен
+            Assert.AreEqual(1, appliances.Count); 
         }
 
     }
